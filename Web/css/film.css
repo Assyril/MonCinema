@@ -1,0 +1,82 @@
+.header {
+	border-style:solid;
+	border:1px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 24px;
+	RIGHT: 10px;
+	TEXT-TRANSFORM: capitalize;
+	COLOR: #3300ff;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Twentieth Century Poster1";
+	text-align: center;
+}
+
+.left {
+	border-style:solid;
+	border:1px;
+	float:left;
+	width:300px;
+}
+
+.middle {
+	border-style:solid;
+	border:2px;
+	float:left;
+	width:700px;
+	font-style: normal;
+	font-size:16px;
+	line-height:24px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align:left;
+	margin: 5px;
+}
+
+.right {
+	border-style:solid;
+	border:2px;
+	float:right;
+	width:200px;
+	clear:left;
+}
+
+.allocine {
+	float:right;
+	width:200px;
+	clear:both;
+}
+
+.footer {
+	clear: both;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	margin: 5px;
+	line-height: normal;
+	font-weight: bold;
+	text-align: left;
+}
+
+.ombre {
+	height:160px;
+	background-color:black;
+	width:120px;
+} /* couleur de la boite, donc de l'ombre */
+
+.boite {
+	height:160px;
+	background-color:white;
+	/*background-image: url(images/pellicule.gif);*/
+	border: 2px solid black;
+	position:relative;
+	top:-7px;
+	left:-7px;
+	vertical-align: middle;
+	width:120px;
+} 
+
+.bouton 	{
+				margin-top: 50px;
+				font-family: "Twentieth Century Poster1";
+				font-size: 16px;
+				font-weight: bold;
+				color: #000099;
+			}

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si le fichier auquel on tente d'acc�der existe (si on veut acc�der � une image par exemple).
+# Alors on ne r��crit pas l'URL.
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ frontend.php [QSA,L]

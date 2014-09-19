@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Titre de la page</title>
+     <meta name="keywords" lang="fr" content="motcle1,mocle2" />
+     <meta name="description" content="Description de ma page web." />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta http-equiv="Content-Language" content="fr" />
+     <link href="styles.css" rel="stylesheet" type="text/css" />
+	 <script type="text/javascript">
+		function CacheHeader()
+		{
+			document.getElementById("Titre").style.display = "none";
+		}
+		
+		function ShowHeader()
+		{
+			document.getElementById("Titre").style.display = "block";
+		}
+		
+	 </script>
+</head>
+<body>
+	<header id="Titre" onmouseout="CacheHeader();" onmouseover="ShowHeader();">
+		<h1>Bienvenue sur le site de mes passions<h1>
+	</header>
+	<div onmouseout="CacheHeader();" onmouseover="ShowHeader();">&nbsp;</div>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Curriculum-Vitae</a></li>
+			<li><a href="#">Jeux de Rôle</a></li>
+			<li><a href="#">Soirée enquête</a></li>
+			<li><a href="#">Cinéma</a></li>
+			<li><a href="#">Généalogie</a></li>
+			<li><a href="#">Informatique</a></li>
+		</ul>
+	</nav>
+	<section>
+	
+	</section>
+	<footer>
+	</footer>
+</body>
+</html>

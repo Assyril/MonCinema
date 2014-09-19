@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<routes>
+	<route url="/" module="Films" action="index" />
+	<route url="/films-([0-9]+)\.html" module="Films" action="show" vars="id"/>
+</routes>

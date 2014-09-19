@@ -1,0 +1,153 @@
+			#header {
+						clear: both;
+						background-color: #FFFFFF;
+						font-family: "Twentieth Century Poster1";
+						font-size: 36px;
+						font-weight: bold;
+						color: #FFFFFF;
+						background-image: url(/images/cinema.jpg);
+						background-repeat: repeat-x;
+						text-align: center;
+						padding: 1px;
+						height: 70px;
+			}
+
+			.middle  {
+						margin-left: 25%;
+						margin-top: 50px;
+						clear:both;
+			}
+
+			.bouton   {
+						margin-top: 50px;
+						font-family: "Twentieth Century Poster1";
+						font-size: 16px;
+						font-weight: bold;
+						color: #000099;
+			}
+			
+			.footer {
+						clear:both;
+						font-family: Verdana, Arial, Helvetica, sans-serif;
+						font-size: 14px;
+						line-height: normal;
+						text-align: left;
+						color: #FFFFFF;
+			}
+			
+			.small {
+						font-size: xx-small
+			}
+			
+			Select {
+						font-family: Arial, Helvetica, sans-serif;
+						font-size: 16px;
+						font-style: normal;
+						line-height: normal;
+						font-weight: bold;
+						background-color: #FFFFFF;
+						text-align: center;
+						margin: 5px;
+			}
+			
+			#left {
+						float: left;
+						width: 200px;
+						background-color: #FFFFFF;
+						height: 300px;
+						background-image: url(/images/COUNT.jpg);
+						background-repeat: repeat;
+						color: #000000;
+						font-weight: bold;
+			}
+			
+			#right {
+						float: right;
+						background-color: #FFFFFF;
+						background-image: url(/images/film.jpg);
+						height: 300px;
+						width: 600px;
+						background-repeat: repeat;
+			}
+			
+			#middle {
+						padding: 0px;
+						margin: 0px;
+						text-align: center;
+						color: #000000;
+			}
+			
+			#footer {
+					    clear: both;
+					    background-color: #FFFFFF;
+			}
+			
+			h3 {
+						font-family: "Times New Roman", Times, serif;
+						font-size: 18px;
+						font-weight: bold;
+						color: #000000;
+						text-align: center;
+			}
+			
+			li {
+						font-family: "Times New Roman", Times, serif;
+						font-size: 14px;
+						font-weight: bold;
+						list-style-type: circle;
+						line-height: 24px;
+						text-align: left;
+			}
+			
+			#outils {
+               width: 540px;
+               background: buttonface;
+               border-top: 1px solid buttonhighlight;
+               border-left: 1px solid buttonhighlight;
+               border-bottom: 1px solid buttonshadow;
+               border-right: 1px solid buttonshadow;
+               margin: 0;
+               text-align:right;
+			}
+			
+			.out {
+               background: buttonface; 
+               border: 1px solid buttonface;
+               margin: 1; 
+			}
+			
+			.over { 
+               background: buttonface;
+               border-top: 1px solid buttonhighlight;
+               border-left: 1px solid buttonhighlight;
+               border-bottom: 1px solid buttonshadow;
+               border-right: 1px solid buttonshadow;
+               margin: 1;
+			}
+
+			.Alerte {
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			color: #FF0000;
+			text-decoration: blink;
+			font-weight: bold;
+			}
+			
+			.note {
+				position: relative;
+				left: 100px;
+				color: #FFFFFF;
+			}
+			.blanc {color: #FFFFFF}
+
+			
+	/* les paramètres left et width =250 correspondent à la largeur du menu */
+	#master	{position:absolute; width: 200px; top: 10px; left: -250px; z-index:2; visibility:visible; }
+	#menu {position:absolute; width: 18px; top: 0px; left: 250px; z-index:5; visibility:visible; }
+	#top {position:absolute; width: 250px; top: 0px; left: 0px; z-index:5; visibility:visible; }
+	#liens {position:absolute; width: 250px; top: 6px; left: 0px; z-index:5; visibility:visible; }
+	.NavJump {font-family: arial; font-size: 10pt; color: #808080; text-decoration: none;}
+	a:link.NavJump {color : #808080;}
+	a:visited.NavJump {color : #808080;}
+	a:active.NavJump {text-decoration: none; color: #C0C0C0;}
+	a:hover.NavJump {text-decoration: none; color: #C0C0C0;}

@@ -1,0 +1,83 @@
+					Copie des données de la table film vers new_film:
+insert into new_film(Nr_film,Titre,Synopsis,Affiche,DVD,Date_Modif_Film) select film.Nr_film,film.Titre,film.Synopsis,film.Affiche,film.DVD,film.Date_Modif from film
+					
+					copie du champ Orgine de film dans la table est_d_origine:
+insert into new_est_d_origine (Nr_film,Nr_Nation) select film.Nr_film,'us' from film where Origine like '%Américain%'
+
+					copie du champ genre de film dans la table est_classe_dans_le:
+insert into new_est_classe_dans_le (id_Genre,Nr_film) select 1,film.Nr_film from film where Genre like '%Action%'
+
+					copie des données de la table note vers new_note:
+insert into new_note (`Nr_Note`,`Nr_cinephile`,`Nr_Film`,`Note_Film`,`Date_vu`,`Date_modif_note`) select note.`Nr_Note`, note.`Nr_cinephile`, note.`Nr_Film`, note.`Note_Film`, note.`Date_vu`, note.`Date_modif_note` from note 
+
+					copie des données de la table acteurs vers new_Individus:
+UPDATE acteurs SET `Sexe` = 'H' where Profession like '%Acteur%'
+UPDATE acteurs SET `Sexe` = 'F' where Profession like '%Actrice%'
+UPDATE acteurs SET `Sexe` = 'H' where Profession like '%Realisateur'
+
+SELECT * FROM new_individus WHERE `SEXE` != 'F' && `SEXE` != 'H'
+
+insert into new_Individus (`Nr_Individus`,`Nom_Individu`,Sexe) select acteurs.`Nr_acteur`, acteurs.`Nom`,acteurs.sexe from acteurs
+
+					Copie des scénaristes:
+insert into new_scenariste (Nr_Individus) select acteurs.Nr_acteur from acteurs where Profession like '%Scenariste%'
+
+					copie des réalisateurs:
+SELECT * FROM `new_realisateurs` WHERE `Nr_Nation` like '1%' || `Nr_Nation` like '2%'
+					
+insert into new_realisateurs (Nr_Individus,Nr_Nation) select acteurs.Nr_acteur,acteurs.Nr_Nation from acteurs where Profession like '%Realisat%'	
+UPDATE new_realisateurs SET Nr_Nation = 'us' where Nr_Nation = '1';
+UPDATE new_realisateurs SET Nr_Nation = 'fr' where Nr_Nation = '2';
+UPDATE new_realisateurs SET Nr_Nation = 'gb' where Nr_Nation = '3';
+UPDATE new_realisateurs SET Nr_Nation = 'au' where Nr_Nation = '4';
+UPDATE new_realisateurs SET Nr_Nation = 'es' where Nr_Nation = '5';
+UPDATE new_realisateurs SET Nr_Nation = 'ca' where Nr_Nation = '6';
+UPDATE new_realisateurs SET Nr_Nation = 'it' where Nr_Nation = '8';
+UPDATE new_realisateurs SET Nr_Nation = 'jp' where Nr_Nation = '11';
+UPDATE new_realisateurs SET Nr_Nation = 'se' where Nr_Nation = '13';
+UPDATE new_realisateurs SET Nr_Nation = 'be' where Nr_Nation = '14';
+UPDATE new_realisateurs SET Nr_Nation = 'cn' where Nr_Nation = '17';
+UPDATE new_realisateurs SET Nr_Nation = 'mx' where Nr_Nation = '7';
+UPDATE new_realisateurs SET Nr_Nation = 'ua' where Nr_Nation = '9';
+UPDATE new_realisateurs SET Nr_Nation = 'cv' where Nr_Nation = '12';
+UPDATE new_realisateurs SET Nr_Nation = 'ch' where Nr_Nation = '15';
+UPDATE new_realisateurs SET Nr_Nation = 'de' where Nr_Nation = '18';
+UPDATE new_realisateurs SET Nr_Nation = 'nl' where Nr_Nation = '16';
+UPDATE new_realisateurs SET Nr_Nation = 'hu' where Nr_Nation = '19';
+UPDATE new_realisateurs SET Nr_Nation = 'in' where Nr_Nation = '20';
+UPDATE new_realisateurs SET Nr_Nation = 'dk' where Nr_Nation = '21';
+UPDATE new_realisateurs SET Nr_Nation = 'ar' where Nr_Nation = '22';
+UPDATE new_realisateurs SET Nr_Nation = 'nz' where Nr_Nation = '23';
+UPDATE new_realisateurs SET Nr_Nation = 'ru' where Nr_Nation = '25'
+
+					copie des acteurs:		
+insert into new_acteurs (Nr_Individus,Nr_Nation) select acteurs.Nr_acteur,acteurs.Nr_Nation from acteurs where Profession like '%Act%'	
+UPDATE new_acteurs SET Nr_Nation = 'us' where Nr_Nation = '1';
+UPDATE new_acteurs SET Nr_Nation = 'fr' where Nr_Nation = '2';
+UPDATE new_acteurs SET Nr_Nation = 'gb' where Nr_Nation = '3';
+UPDATE new_acteurs SET Nr_Nation = 'au' where Nr_Nation = '4';
+UPDATE new_acteurs SET Nr_Nation = 'es' where Nr_Nation = '5';
+UPDATE new_acteurs SET Nr_Nation = 'ca' where Nr_Nation = '6';
+UPDATE new_acteurs SET Nr_Nation = 'mx' where Nr_Nation = '7';
+UPDATE new_acteurs SET Nr_Nation = 'it' where Nr_Nation = '8';
+UPDATE new_acteurs SET Nr_Nation = 'ua' where Nr_Nation = '9';
+UPDATE new_acteurs SET Nr_Nation = 'jp' where Nr_Nation = '11';
+UPDATE new_acteurs SET Nr_Nation = 'cv' where Nr_Nation = '12';
+UPDATE new_acteurs SET Nr_Nation = 'se' where Nr_Nation = '13';
+UPDATE new_acteurs SET Nr_Nation = 'be' where Nr_Nation = '14';
+UPDATE new_acteurs SET Nr_Nation = 'ch' where Nr_Nation = '15';
+UPDATE new_acteurs SET Nr_Nation = 'nl' where Nr_Nation = '16';
+UPDATE new_acteurs SET Nr_Nation = 'cn' where Nr_Nation = '17';
+UPDATE new_acteurs SET Nr_Nation = 'de' where Nr_Nation = '18';
+UPDATE new_acteurs SET Nr_Nation = 'hu' where Nr_Nation = '19';
+UPDATE new_acteurs SET Nr_Nation = 'in' where Nr_Nation = '20';
+UPDATE new_acteurs SET Nr_Nation = 'dk' where Nr_Nation = '21';
+UPDATE new_acteurs SET Nr_Nation = 'ar' where Nr_Nation = '22';
+UPDATE new_acteurs SET Nr_Nation = 'nz' where Nr_Nation = '23';
+UPDATE new_acteurs SET Nr_Nation = 'ru' where Nr_Nation = '25'
+
+					copie de la table acteur_dans_film dans la table new_est_interpreter_par:
+insert into new_est_interpreter_par (Nr_film,Nr_Individus) select acteur_dans_film.Nr_film,acteur_dans_film.Nr_acteur from acteur_dans_film
+
+					copie de la table realise_par dans la table new_est_realise_par:
+insert into new_est_realise_par (Nr_film,Nr_Individus) select realise_par.Nr_film,realise_par.Nr_perso from realise_par

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<definitions>
+  <define var="an_min" value="1997" />
+  <define var="an_max" value="2012" />
+</definitions>

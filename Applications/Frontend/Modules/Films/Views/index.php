@@ -38,7 +38,7 @@ foreach ($listeFilms as $films)
 ?>
 	<tr valign='middle'>
 		<td bordercolor='#ffffff' align='right' colspan='3'><h2><strong>Nombre de film :</strong></h2></td>
-		<td bordercolor='#000000' align='center'><h2><strong>$Nb_film</strong></h2>
+		<td bordercolor='#000000' align='center'><h2><strong><?php echo $nbFilms['nbFilms'] ?></strong></h2>
 	</tr>
 	<tr>
 		<td bordercolor='#ffffff' colspan='4'>&nbsp</td>
@@ -46,10 +46,10 @@ foreach ($listeFilms as $films)
 	
 	<tr>
 		<td align='left' bordercolor='#ffffff' colspan='2'>
-			<input type='button' name='print' id='print' class='bouton' value='Imprimer' onclick='javascript:window.location=\"print.php\'>
+			<input type="button" name="print" id="print" class="bouton" value="Imprimer" onclick="javascript:window.location='/print.php'" />
 		</td>
 		<td align='right' bordercolor='#ffffff' colspan='3'>
-			<input type='button' name='index' id='index' class='bouton' value='Retour au debut' onclick='javascript:window.location=\"index.php\'>
+			<input type="button" name="index" id="index" class="bouton" value="Retour au debut" onclick="javascript:window.location='/search.html'" />
 		</td>
 	</tr>
 </table>

@@ -2,4 +2,10 @@
 <routes>
 	<route url="/" module="Films" action="index" />
 	<route url="/films-([0-9]+)\.html" module="Films" action="show" vars="id"/>
+	<!-- 
+		La route suivante me permet de gérer les boutons 'retour au début' afin
+		de retourner sur le formulaire de recherche 
+		je ne suis pas sûr que c'est correct !!! 
+	-->
+	<route url="/search.html" module="Search" action="index" />
 </routes>

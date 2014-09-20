@@ -21,6 +21,20 @@
 
     	
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		
+	     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+		 <script type="text/javascript">
+			function CacheHeader()
+			{
+				document.getElementById("Titre").style.display = "none";
+			}
+			
+			function ShowHeader()
+			{
+				document.getElementById("Titre").style.display = "block";
+			}
+		 </script>
+		
 		<script type="text/javascript">
 			$(document).ready(function() {
 
@@ -104,6 +118,26 @@
     </head>
   
 	<body>
-		<?php echo $content; ?>
+		<header id="Titre" onmouseout="CacheHeader();" onmouseover="ShowHeader();">
+			<h1>Bienvenue sur le site de mes passions<h1>
+		</header>
+		<div onmouseout="CacheHeader();" onmouseover="ShowHeader();">&nbsp;</div>
+		
+		<nav>
+			<ul>
+				<li><a href="#">Curriculum-Vitae</a></li>
+				<li><a href="#">Jeux de Rôle</a></li>
+				<li><a href="#">Soirée enquête</a></li>
+				<li><a href="#">Cinéma</a></li>
+				<li><a href="#">Généalogie</a></li>
+				<li><a href="#">Informatique</a></li>
+				<li><a href="/search.html">Accueil</a></li>
+			</ul>
+		</nav>
+		<section>
+			<?php echo $content; ?>
+		</section>
+		<footer>
+		</footer>	
 	</body>
 </html>

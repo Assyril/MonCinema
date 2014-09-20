@@ -14,10 +14,13 @@ class FilmsManager_PDO extends FilmsManager
 
 	    $requete = $this->dao->query($sql);
 	    $Notes= array();
-	    $requete->setFetchMode(\PDO::FETCH_ASSOC);  
+	    $requete->setFetchMode(\PDO::FETCH_ASSOC);
+
+	    $nbFilms = 0;
 	    
 	    while (($row = $requete->fetch()) !== false)
 	    {
+	    	$nbFilms++;
 		   	$film = new Films();
 	    		$film->setidFilm($row['idFilm']);
 	    		$film->setTitre($row['Titre']);
@@ -30,8 +33,22 @@ class FilmsManager_PDO extends FilmsManager
 	    	$Notes[] = $note;
 	    } 
 	    $requete->closeCursor();
+	    //$Notes['nbFilm'] = $nbFilms;
 	       
 	    return $Notes;
+  	}
+  	
+	public function count($annee=2012)
+  	{
+    	$sql = 'SELECT count(*) as nbFilms FROM film join note on film.Nr_Film=note.Nr_Film WHERE year(Date_Vu)='.$annee.' and Nr_Cinephile=1';
+
+	    $requete = $this->dao->query($sql);
+	    $Notes= array();
+	    $requete->setFetchMode(\PDO::FETCH_ASSOC);
+
+	    $nbFilms = $requete->fetch();
+	       
+	    return $nbFilms;
   	}
   	
   	public function getUnique($id)

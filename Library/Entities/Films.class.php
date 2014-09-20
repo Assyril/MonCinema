@@ -1,15 +1,18 @@
 <?php
 namespace Library\Entities;
+
 use \Library\Entities\Acteurs;
 use \Library\Entities\Realisateurs;
 use \Library\Entities\Origines;
 use \Library\Entities\Genres;
+
 class Films extends \Library\Entity
 {
 	protected $idFilm;
 	protected $titre;
 	protected $synopsis;
 	protected $affiche;
+	
 	protected $acteurs;
 	protected $realisateurs;
 	protected $origines;

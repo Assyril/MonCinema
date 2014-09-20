@@ -4,9 +4,10 @@ use \Library\Entities\Films;
 class Note extends \Library\Entity
 {
 	protected $idNote;
-	protected $films;
 	protected $note_Film;
 	protected $date_vu;
+	protected $films;
+	//Il faudra corriger cela et mettre un tableau de Note dans Films
 	
 	// SETTERS //
 	

@@ -18,9 +18,12 @@ class FilmsController extends \Library\BackController
 		// Cette ligne, vous ne pouviez pas la deviner sachant qu'on n'a pas encore touché au modèle.
 		// Contentez-vous donc d'écrire cette instruction, nous implémenterons la méthode ensuite.
 		$listeFilms = $manager->getList($annee);
+		$nbFilms = $manager->count($annee);
+		//var_dump($nbFilms);
 		
 		// On ajoute la variable $listeNews à la vue.
 		$this->page->addVar('listeFilms', $listeFilms);
+		$this->page->addVar('nbFilms', $nbFilms);
 	}
 	
 	public function executeShow(\Library\HTTPRequest $request)
